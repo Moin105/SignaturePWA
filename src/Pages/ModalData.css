@@ -1,0 +1,30 @@
+.pdf-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pdf-container .pdf-row {
+  display: flex;
+}
+.pdf-container .pdf-row .right {
+  width: 50%;
+}
+.pdf-container .pdf-row .right .p {
+ font-family: 'Poppins-Medium';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+}
+.pdf-container .pdf-row .left {
+  width: 50%;
+}
+.pdf-container .pdf-row .left h5 {
+ font-family: 'Poppins-Medium';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+}/*# sourceMappingURL=ModalData.css.map */

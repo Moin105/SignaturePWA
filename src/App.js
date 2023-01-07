@@ -12,14 +12,26 @@ import ModalData from './Pages/ModalData';
 function App() {
   const [tab, setTab] = useState("details")
   const [active, setActive] = useState("1")
+  const [itemCreds, setItemCreds] = useState(null)
   // const [active ,setActive]= useState(true)
   const [itemDetails, setItemDetails] = useState([])
+  const [customerDetails, setCustomerDetails] = useState(null)
+  const [customerSignature, setCustomerSignature] = useState(null)
+  const [installer, setInstaller] = useState(null)
   // const sendDataToParent = (index) => { // the callback. Use a better name
   //   console.log("onder",index);
   //   setTab(index);
   // };
-  const getItemsData = (arr) => {
+  const getItemsData = (arr, creds) => {
+    setItemCreds(creds)
     setItemDetails(arr)
+  }
+  const getCustomerData = (details, image) => {
+    setCustomerDetails(details)
+    setCustomerSignature(image)
+  }
+  const getInstallerData = (data) => {
+    setInstaller(data)
   }
   useEffect(() => {
     console.log("active tab", tab)
@@ -28,7 +40,7 @@ function App() {
 
   console.log("const", tab)
   return (
-    <div className="App font-face-pb">
+    <div className="App">
 
       <div className='container'>
         <div className='upper'>
@@ -42,17 +54,17 @@ function App() {
           </div>
           {/* {tab == "details" &&  <ItemDetails setTab={setTab} itemDetails={itemDetails} setItemDetails={setItemDetails}/>} */}
           <div className={tab == "customer" ? "show" : "hide"}>
-            <Customer setTab={setTab} />
+            <Customer setTab={setTab} getData={getCustomerData} />
           </div>
           {/* {tab == "customer" && <Customer setTab={setTab}/>} */}
           <div className={tab == "installer" ? "show" : "hide"}>
-            <InstallerDetails />
+            <InstallerDetails getInstallerData={getInstallerData} />
           </div>
           {/* {tab == "installer" && <InstallerDetails/>} */}
         </div>
       </div>
       <div>
-        <ModalData itemDetails={itemDetails} />
+        <ModalData itemDetails={itemDetails} itemCreds={itemCreds} customerSignature={customerSignature} customerDetails={customerDetails} installer={installer} />
       </div>
     </div>
 

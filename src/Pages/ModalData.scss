@@ -1,0 +1,31 @@
+.pdf-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    .pdf-row{
+        display: flex;
+
+        .right{
+            width: 50%;
+            .p{
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 18px;
+                color: #000000;
+            }
+        }
+        .left{
+            width: 50%;
+            h5{
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 21px;
+                color: #000000;
+            }
+        }
+    }
+}
