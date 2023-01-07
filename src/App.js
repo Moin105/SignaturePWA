@@ -68,7 +68,7 @@ function App() {
        </div>
     </div>
     <div>
-{  showModal &&    <ModalData itemDetails={itemDetails} itemCreds={itemCreds} customerSignature={customerSignature} customerDetails={customerDetails}  installer={installer}/>}    </div>
+{  showModal &&    <ModalData itemDetails={itemDetails} itemCreds={itemCreds} customerSignature={customerSignature} customerDetails={customerDetails} showModal={showModal} getModal={getModal}  installer={installer}/> }    </div>
     </div>
 
   );

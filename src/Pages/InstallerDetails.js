@@ -25,7 +25,6 @@ function InstallerDetails({ getInstallerData, getModal }) {
   const getStep = () => {
     // setActive("2")
     getInstallerData(details)
-    window.alert("hello your form submited")
     getModal(true)
   }
   return (
