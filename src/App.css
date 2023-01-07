@@ -1,11 +1,14 @@
 .App {
+  font-family: 'Poppins-Medium';
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -52,8 +55,7 @@
 }
 .upper .logo{
   padding: 56px 0px 24px 0px;
-  width: 129px;
-  height: 70px;
+
 }
 .container .lower{
   height: calc(100vh - 150px);

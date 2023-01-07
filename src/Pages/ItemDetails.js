@@ -5,7 +5,7 @@ import ItemCount from '../Components/Inputs/ItemCount';
 import './Details.css'
 var temp;
 temp = { item: "", count: "" }
-function ItemDetails({ setTab,itemDetails,setItemDetails ,setActive}) {
+function ItemDetails({ setTab, itemDetails, setItemDetails, setActive }) {
     const [disable, setDisable] = useState(true)
     const [details, setDetails] = useState({
         businessName: "",
@@ -21,42 +21,42 @@ function ItemDetails({ setTab,itemDetails,setItemDetails ,setActive}) {
         let t = itemArr
         itemArr[index - 1] = { item: value, count: quantity }
         setItemDetails(t)
-        console.log("old testament234324234234324", t,itemArr); console.log("asdewf", itemDetails)
-        
+        console.log("old testament234324234234324", t, itemArr); console.log("asdewf", itemDetails)
+
         checkItemVal()
         // if (t[index - 1].item !== '') { setTrues(trues + 1) }
     }
-    const disablebtn = ()=>{
-     setDisable(true)
+    const disablebtn = () => {
+        setDisable(true)
     }
-   const checkInputs =() => {
+    const checkInputs = () => {
         console.log("bsdk")
-        if(details.item ==(0 || NaN || "") || details.businessName == ""){
-                    setDisable(true)
+        if (details.item == (0 || NaN || "") || details.businessName == "") {
+            setDisable(true)
         }
-        if( details.businessName !== "" && details.item ==(0 || NaN || "") ){
+        if (details.businessName !== "" && details.item == (0 || NaN || "")) {
             setDisable(false)
         }
-      }
-    
+    }
+
     useEffect(() => {
-checkInputs()
+        checkInputs()
     }, [details])
-    
+
     const checkItemVal = () => {
-      
-        if(details.item !==(0 || NaN || "") && details.businessName !== "")
-      
-     {   let check = false
-        console.log("halsey", itemArr.length, trues)
-        itemArr.forEach((item) => {
-            if (item.item == "") { 
-                check = true
-             }else{
-                check= false
-             }
-        } )
-        setDisable(check)}
+
+        if (details.item !== (0 || NaN || "") && details.businessName !== "") {
+            let check = false
+            console.log("halsey", itemArr.length, trues)
+            itemArr.forEach((item) => {
+                if (item.item == "") {
+                    check = true
+                } else {
+                    check = false
+                }
+            })
+            setDisable(check)
+        }
     }
     const updateCount = (count) => {
         return setInitialCount(prev => prev = parseInt(count))
@@ -77,16 +77,16 @@ checkInputs()
     let d = []
     useEffect(() => {
         console.log("ap dhillon")
-        
-        for (var i = 1; i <= (itemArr.length > 0 ? (initialCount-itemArr.length) : initialCount); i++) {
+
+        for (var i = 1; i <= (itemArr.length > 0 ? (initialCount - itemArr.length) : initialCount); i++) {
             d = [...d, temp]
         }
-        setItemArr(d)  
+        setItemArr(d)
         setItemDetails(itemArr)
-// window.alert(initialCount  , itemArr.length,itemDetails)
-      
-        console.log("older testament", initialCount ,details.length ,itemArr.length )
-    
+        // window.alert(initialCount  , itemArr.length,itemDetails)
+
+        console.log("older testament", initialCount, details.length, itemArr.length)
+
     }, [details])
 
     useEffect(() => {
@@ -99,18 +99,18 @@ checkInputs()
             ...details,
             [e.target.name]: e.target.value,
         });
-        if(details.businessName !== ""){setDisable(false)}
+        if (details.businessName !== "") { setDisable(false) }
     };
-const getStep = ()=>{
-    // setActive("2")
-    setTab("customer")
-}
+    const getStep = () => {
+        // setActive("2")
+        setTab("customer")
+    }
     return (
 
         <>
             <div className='details'>
-                <Input bname="Business Name" name="businessName" placeholder="Star Bucks coffee" type="text" handleChange={handleChange} />
-                <Input bname="Number of items" name="itemCount" placeholder="Please enter number of items" type="number" handleChange={handleChange} />
+                <Input bname="Business Name" name="businessName" placeholder="Example: XYZ Co." type="text" handleChange={handleChange} />
+                <Input bname="Number of items" name="itemCount" placeholder="Please Enter The Number Of Items" type="number" handleChange={handleChange} />
                 <div className='count-container'>
                     {
                         Array.from({ length: initialCount }).map((name, index) => {
@@ -118,7 +118,7 @@ const getStep = ()=>{
                         })
                     }
                 </div>
-                <Button name="Proceed Next" disable={disable}  func={getStep} />
+                <Button name="Proceed Next" disable={disable} func={getStep} />
             </div>
         </>
 

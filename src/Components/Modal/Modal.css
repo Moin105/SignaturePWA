@@ -43,7 +43,7 @@
   width: 364px;
 }
 .modal .item-box .item-container .item {
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -54,7 +54,7 @@
   color: #000000;
 }
 .modal .item-box .item-container .item-hover {
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-style: normal;
   font-weight: 400;
   width: 100%;

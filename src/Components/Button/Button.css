@@ -1,6 +1,6 @@
 .btn {
   padding: 14px 115px;
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -16,7 +16,7 @@
 
 .g-btn {
   padding: 14px 115px;
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -32,7 +32,7 @@
 
 .sbtn {
   padding: 14px 35px;
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-style: normal;
   width: 127px;
   font-weight: 400;
@@ -48,7 +48,7 @@
 
 .suvbtn {
   padding: 14px 35px;
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-style: normal;
   width: 127px;
   font-weight: 400;
