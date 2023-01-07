@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Button from '../Components/Button/Button';
 import Input from '../Components/Inputs/Input'
 import './InstallerDetails.css'
-function InstallerDetails({ getInstallerData }) {
+function InstallerDetails({ getInstallerData, getModal }) {
   const [disable, setDisable] = useState(true)
   const [details, setDetails] = useState({
     installerName: "",
@@ -26,6 +26,7 @@ function InstallerDetails({ getInstallerData }) {
     // setActive("2")
     getInstallerData(details)
     window.alert("hello your form submited")
+    getModal(true)
   }
   return (
 

@@ -1,17 +1,123 @@
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 111111111111111111;
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 0px !important;
+        font-size: 28px;
+        width: 385px;
+        max-width: 386px;
+        z-index: 111111111111111111111111111111;
+        color: black;
+        background-color: #fff;
+        border-radius: 1em;
+        transform: translate(-50%, -50%);
+        outline: transparent;
+      }
+  }
 .pdf-container{
+    border-radius: 16px;
+    .head{
+        display: flex;
+        width: 100%;
+        background-color: #D3BC8C;
+        color: white;
+        border-radius: 16px 16px 0px 0px;
+        h4{
+            padding: 14px 0px 14px 28px;
+            margin: 0;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+    }
     display: flex;
     flex-direction: column;
     gap: 8px;
-    .pdf-row{
+    .pdf-box{
         display: flex;
+        flex-direction: column;
+        margin: 0 auto;width: 100%;
+        max-width: 360px;
+        .top{
 
+        max-width: 360px;
+            width: 100%;
+
+            h5{
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                margin: 0;
+                text-align: initial;
+                line-height: 21px;
+                color: #000000;
+            }
+        }
+        .signatures{
+            width: 98px;
+            height: 53px;
+            margin: 0 auto;
+        }
+        .bottom{
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 8px;
+            align-items: flex-start;
+            .item-row{
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                .p{
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    border-radius: 4px;
+                    font-weight: 400;
+                    font-size: 14px;margin: 0;
+                    line-height: 20px;
+                    width: 24px;
+                    height: 21px;
+                    border: 1px solid #D3BC8C;
+                    color: #D3BC8C;
+                }
+                .ps{
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;margin: 0;
+                    line-height: 20px;
+                    color: #000000;
+                }
+            }
+        }
+    }
+    .pdf-row{
+        display: flex;width: 100%;
+        margin: 0 auto;
+        max-width: 360px;
         .right{
             width: 50%;
-            .p{
+            p{
                 font-family: 'Poppins';
                 font-style: normal;
                 font-weight: 400;
+                margin: 0 !important;
                 font-size: 12px;
+                text-align: initial;
                 line-height: 18px;
                 color: #000000;
             }
@@ -20,9 +126,11 @@
             width: 50%;
             h5{
                 font-family: 'Poppins';
+                margin: 0;
                 font-style: normal;
                 font-weight: 600;
                 font-size: 14px;
+                text-align: initial;
                 line-height: 21px;
                 color: #000000;
             }
