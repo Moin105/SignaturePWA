@@ -78,7 +78,7 @@
   flex-direction: column;
   position: relative;
   align-items: flex-start;
-  max-width: 195px;
+  max-width: 205px;
 }
 .input-item .field-name {
   font-family: "Poppins-Medium";
@@ -94,12 +94,12 @@
 .input-item .item {
   font-family: "Poppins-Medium";
   font-style: normal;
-  max-width: 195px;
+  max-width: 205px;
   font-weight: 400;
   border: solid 0.5px #D3BC8C;
   border-radius: 8px;
   color: rgb(0, 0, 0);
   font-size: 12px;
   line-height: 18px;
-  padding: 16px 0px 14px 27px;
+  padding: 16px 0px 14px 10px;
 }/*# sourceMappingURL=input.css.map */

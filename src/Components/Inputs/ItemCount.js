@@ -12,9 +12,9 @@ function ItemCount({ bname, name, indi, placeholder, type, onSelect }) {
         setItemVal(value)
         console.log('check values', index, value, quantity)
     }
-useEffect(() => {
-    onSelect(indi,itemVal,quantity)
-}, [itemVal])
+    useEffect(() => {
+        onSelect(indi, itemVal, quantity)
+    }, [itemVal])
 
     const addItem = () => {
         console.log("clicked");
@@ -31,14 +31,14 @@ useEffect(() => {
     return (
         <div className='input-row'>
             <div className='input-item'>
-                <p className='field-name'>Select Item</p>
-                <input placeholder="Select drop down" type="" className="item" defaultValue={itemVal} readOnly={true} name={name} onClick={() => { setShow(true);}} />
+                <p className='field-name'>Item {indi}</p>
+                <input placeholder="Select Item" type="" style={{ width: '210px', maxWidth: '210px', marginRight: '10px' }} className="item" defaultValue={itemVal} readOnly={true} name={name} onClick={() => { setShow(true); }} />
             </div>
-            <div className='input-quantity'>
+            <div className='input-quantity' style={{ marginLeft: '20px' }}>
                 <p className='field-name'>Quantity</p>
-                <p className='plus' onClick={() => { addItem() }}><AiFillPlusSquare /></p>
-                <p className='minus' onClick={() => { removeItem() }} ><AiFillMinusSquare /></p>
-                <input placeholder={placeholder} type="number" className="quantity" onChange={(e) => { setQuantity(e.target.value); onSelect(indi, itemVal, quantity) }} value={quantity} name={name} />
+                <p className='plus' style={{ color: '#E2E3E3', marginLeft: '1px' }} onClick={() => { addItem() }}><AiFillPlusSquare /></p>
+                <p className='minus' style={{ color: '#E2E3E3' }} onClick={() => { removeItem() }} ><AiFillMinusSquare /></p>
+                <input placeholder={placeholder} type="number" style={{ width: '50px', paddingRight: '10px', paddingLeft: '55px' }} className="quantity" onChange={(e) => { setQuantity(e.target.value); onSelect(indi, itemVal, quantity) }} value={quantity} name={name} />
             </div>
             {show && <Modal key={indi} itemNo={indi} onSelect={getValue} setItemVal={setItemVal} setShow={setShow} />}
         </div>

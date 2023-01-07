@@ -66,7 +66,7 @@ function Customer({ setTab, getData }) {
       <div className='details'>
         <Input bname="Customer Name" name="customerName" placeholder="Example : John Doe" type="text" handleChange={handleChange} />
         <Input bname="Email" name="email" placeholder="123@mail.com" type="text" handleChange={handleChange} />
-        <Input bname="Select Date" name="date" placeholder="dd/mm/yyyy" type="text" handleChange={handleChange} />
+        <Input bname="Date" name="date" placeholder="dd/mm/yyyy" type="text" handleChange={handleChange} />
         <Signature active={active} setImageURL={getSignatureValue} imageURL={imageURL} />
         <Button name="Proceed Next" disable={disabled} page="customer" func={getStep} />
       </div>
