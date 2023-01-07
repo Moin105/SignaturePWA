@@ -8,7 +8,7 @@ function ModalData({ itemDetails, itemCreds, customerDetails, customerSignature,
     }, [customerSignature, installer])
 
     return (
-        <><div className='overlay'>
+        <><div className='overlay' style={{ fontFamily: 'Poppins-Medium' }}>
             <div className='modal'>  <div className='pdf-container'>
                 <div className='head'><h4>Order Details</h4></div>
                 <div className='pdf-row'>
@@ -40,7 +40,7 @@ function ModalData({ itemDetails, itemCreds, customerDetails, customerSignature,
                     <div className='right'><p>{customerDetails.date}</p></div>
                 </div>
                 <div className='pdf-box'>
-                    <div className='top'><h5>Items Details</h5></div>
+                    <div className='top'><h5>Signature</h5></div>
                     <div className='bottom'><img src={customerSignature} className='signatures' /></div>
                 </div>
                 <div className='pdf-row'>
