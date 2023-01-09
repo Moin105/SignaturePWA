@@ -24,6 +24,19 @@
   color: black;
   margin-bottom: 9px;
 }
+.customer .input-container input {
+  font-family: "Poppins";
+  outline: none;
+  font-style: normal;
+  min-width: 335px;
+  font-weight: 400;
+  border: solid 1px #797D88;
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  line-height: 18px;
+  padding: 16px 0px 14px 27px;
+}
 .customer .input-container .input {
  font-family: 'Poppins-Medium';
   outline: none;

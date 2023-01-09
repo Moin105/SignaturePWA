@@ -10,10 +10,16 @@ function ModalData({ date, itemDetails, itemCreds, customerDetails, customerSign
         report.html(document.querySelector('#report')).then(() => {
             console.log("randox", report)
             report.save('report.pdf');
+
         });
     }
+    // const d = new Date(date,"dd/mm/yyyy");
+    // let dat = JSON.stringify(d)
+
+
     useEffect(() => {
         console.log("formfinaldata", date, itemDetails, itemCreds, customerDetails, customerSignature, installer)
+
     }, [customerSignature, installer])
     return (
         <><div className='overlay'>
@@ -36,36 +42,37 @@ function ModalData({ date, itemDetails, itemCreds, customerDetails, customerSign
 
                         </div>
                     </div>
-                    <div className='pdf-row'>
-                        <div className='left'><h5>Customer Name</h5></div>
-                        <div className='right'><p>{customerDetails?.customerName}</p></div>
-                    </div>
-                    <div className='pdf-row'>
-                        <div className='left'><h5>Email:</h5></div>
-                        <div className='right'><p>{customerDetails?.email}</p></div>
-                    </div>
-                    <div className='pdf-row'>
-                        <div className='left'><h5>Date:</h5></div>
-                        {/* <div className='right'><p>{date || ""}</p></div> */}
-                    </div>
-                    <div className='pdf-box'>
-                        <div className='top'><h5>Items Details</h5></div>
-                        <div className='bottom'><img src={customerSignature} className='signatures' /></div>
-                    </div>
-                    <div className='pdf-row'>
-                        <div className='left'><h5>Installer Name:</h5></div>
-                        <div className='right'><p>{installer?.installerName}</p></div>
-                    </div>
-                    <div className='pdf-row'>
-                        <div className='left'><h5>Notes:</h5></div>
-                        <div className='right'><p>{installer?.notes}</p></div>
-                    </div>
                 </div>
-                <div className='btn-row'>
-                    <Sbutton name="Close" type="close" func={getModal} onClick={() => { console.log("close") }} />
-                    <Sbutton name="Confirm" type="confirm" func={generatePDF} onClick={() => { console.log("close") }} />
+                <div className='pdf-row'>
+                    <div className='left'><h5>Customer Name</h5></div>
+                    <div className='right'><p>{customerDetails?.customerName}</p></div>
+                </div>
+                <div className='pdf-row'>
+                    <div className='left'><h5>Email:</h5></div>
+                    <div className='right'><p>{customerDetails?.email}</p></div>
+                </div>
+                <div className='pdf-row'>
+                    <div className='left'><h5>Date:</h5></div>
+                    <div className='right'><p>{date.toLocaleString('en-GB').slice(0, -10)}</p></div>
+                </div>
+                <div className='pdf-box'>
+                    <div className='top'><h5>Items Details</h5></div>
+                    <div className='bottom'><img src={customerSignature} className='signatures' /></div>
+                </div>
+                <div className='pdf-row'>
+                    <div className='left'><h5>Installer Name:</h5></div>
+                    <div className='right'><p>{installer?.installerName}</p></div>
+                </div>
+                <div className='pdf-row'>
+                    <div className='left'><h5>Notes:</h5></div>
+                    <div className='right'><p>{installer?.notes}</p></div>
                 </div>
             </div>
+            <div className='btn-row'>
+                <Sbutton name="Close" type="close" func={getModal} onClick={() => { console.log("close") }} />
+                <Sbutton name="Confirm" type="confirm" func={generatePDF} onClick={() => { console.log("close") }} />
+            </div>
+        </div>
         </div>
         </>
     )

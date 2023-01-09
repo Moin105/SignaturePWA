@@ -72,7 +72,7 @@ function Customer({ setTab, getData }) {
 
 
   const getStep = () => {
-    getData(details, imageURL,date)
+    getData(details, imageURL, date)
     // setActive("3")
     setTab("installer")
   }
@@ -84,7 +84,7 @@ function Customer({ setTab, getData }) {
         <Input bname="Email" name="email" placeholder="123@mail.com" type="text" handleChange={handleChange} />
         <div className='input-container'>
           <p className='field-name'>Date</p>
-          <Calendar dateFormat="dd/mm/yy" value={date} onChange={(e) => setDate(e.value)} className="input" />
+          <Calendar dateFormat="dd/mm/yy" value={date} placeholder="dd/mm/yyyy" onChange={(e) => { setDate(e.value); console.log("dates", e.value.toLocaleString('en-GB').slice(0, -10)) }} style={{ width: "335px", border: "none", padding: "0px" }} className='input' inputClassName="input" />
           {/* <input placeholder={placeholder} min={min} value={val} type={type} className="input" name={name} onChange={handleChange} /> */}
         </div>
         {/* <Input bname="Select Date" name="date" placeholder="dd/mm/yyyy" type="text" handleChange={handleChange} /> */}
