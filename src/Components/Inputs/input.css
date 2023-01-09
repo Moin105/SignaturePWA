@@ -5,7 +5,7 @@
   align-items: flex-start;
 }
 .input-container .field-name {
-
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -14,7 +14,8 @@
   margin-bottom: 9px;
 }
 .input-container .input {
-  font-family: "Poppins-Medium";
+  font-family: "Poppins";
+  outline: none;
   font-style: normal;
   min-width: 335px;
   font-weight: 400;
@@ -33,7 +34,7 @@
   align-items: flex-start;
 }
 .input-quantity .field-name {
-  font-family: "Poppins-Medium";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -60,10 +61,10 @@
   left: 0;
 }
 .input-quantity .quantity {
-  font-family: "Poppins-Medium";
+  font-family: "Poppins";
   font-style: normal;
   max-width: 131px;
-  width: 80px;
+  width: 130px;
   font-weight: 400;
   border: solid 1px #797D88;
   border-radius: 8px;
@@ -81,22 +82,20 @@
   max-width: 205px;
 }
 .input-item .field-name {
-  font-family: "Poppins-Medium";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: black;
   margin-bottom: 9px;
-}::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color:rgba(0, 0, 0, 0.3);
 }
 .input-item .item {
-  font-family: "Poppins-Medium";
+  font-family: "Poppins";
   font-style: normal;
   max-width: 205px;
   font-weight: 400;
-  border: solid 0.5px #D3BC8C;
+  border: solid 1px #797D88;
   border-radius: 8px;
   color: rgb(0, 0, 0);
   font-size: 12px;

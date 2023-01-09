@@ -16,7 +16,7 @@
   align-items: flex-start;
 }
 .installer-details .input-message .field-message {
-  font-family: "Poppins-Medium";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -28,7 +28,7 @@
   word-wrap: break-word;
   word-break: break-all;
   outline: none;
-  font-family: "Poppins-Medium";
+  font-family: "Poppins";
   font-style: normal;
   min-width: 335px;
   font-weight: 400;

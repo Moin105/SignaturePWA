@@ -2,6 +2,7 @@ import React from 'react'
 import Input from '../Inputs/Input'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import './Modal.css'
+import '../Button/Button.css'
 import datas from '../../Data/items.json';
 import { useState, useEffect } from 'react'
 import Sbutton from '../Button/Sbutton';
@@ -13,7 +14,7 @@ function Modal({ setShow, itemNo, setItemVal, onSelect }) {
     const handleChange = (e) => {
         console.log("testament", e.target.value)
         setSearch(e.target.value);
-        setItemVal(search)
+
     };
     const mouseOver = (event, name) => {
         setHover(name)
@@ -37,14 +38,14 @@ function Modal({ setShow, itemNo, setItemVal, onSelect }) {
                                                 : <div key={index} onMouseOver={() => { setHover(item.Name) }} onClick={(e) => { setSearch(item.Name); onSelect(itemNo, item.Name) }} className="item">{item.Name}</div>}</>)
                                         }
                                     })
-
                                 )
                             }
                         </div>
                     </div>
                     <div className='btn-row'>
                         <Sbutton name="Close" type="close" func={setShow} onClick={() => { console.log("close") }} />
-                        <Sbutton name="Confirm" type="confirm" func={setShow} onClick={() => { console.log("close") }} />
+                        <button className='suvbtn' onClick={() => { setShow(false); setItemVal(search) }}>Confirm</button>
+                        {/* <Sbutton name="Confirm" type="confirm" func={setShow} onClick={()=>{console.log("close")}}/> */}
                     </div>
                 </div>
             </div>

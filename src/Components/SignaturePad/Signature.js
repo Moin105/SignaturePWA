@@ -2,12 +2,13 @@ import React, { useState, useRef } from 'react'
 import SignatureCanvas from 'react-signature-canvas';
 import Sbutton from '../Button/Sbutton';
 import './Signature.css'
-function Signature({ active, setActive, imageURL, setImageURL }) {
+function Signature({ active, setActive, imageURL, enable, setImageURL }) {
   const sigCanvas = useRef()
   const create = () => {
     const URL = sigCanvas.current.getTrimmedCanvas().toDataURL('image/png')
     setImageURL(URL)
     console.log("image", imageURL)
+    enable()
   }
   const download = () => {
     const dlink = document.createElement("a")
