@@ -22,7 +22,7 @@ function App() {
   const [customerSignature, setCustomerSignature] = useState(null)
   const [installer, setInstaller] = useState(null)
   const [insta, setInsta] = useState(null)
-
+  const [date, setDate] = useState(null)
   const [showModal, setshowModal] = useState(false)
   // const sendDataToParent = (index) => { // the callback. Use a better name
   //   console.log("onder",index);
@@ -42,8 +42,9 @@ function App() {
   const getModal = (x) => {
     setshowModal(x)
   }
-  const getCustomerData = (details, image) => {
+  const getCustomerData = (details, image, date) => {
     setCustomerDetails(details)
+    setDate(date)
     setCustomerSignature(image)
   }
   const getInstallerData = (data) => {
@@ -56,7 +57,7 @@ function App() {
 
   console.log("const", tab)
   return (
-    <div className="App" style={{ fontFamily: 'Poppins-Medium' }}>
+    <div className="App">
 
       <div className='container'>
         <div className='upper'>
@@ -80,7 +81,7 @@ function App() {
         </div>
       </div>
       <div>
-        {showModal && <ModalData itemDetails={itemDetails} itemCreds={itemCreds} customerSignature={customerSignature} customerDetails={customerDetails} showModal={showModal} getModal={getModal} installer={installer} />}    </div>
+        {showModal && <ModalData date={date} itemDetails={itemDetails} itemCreds={itemCreds} customerSignature={customerSignature} customerDetails={customerDetails} showModal={showModal} getModal={getModal} installer={installer} />}    </div>
     </div>
 
   );

@@ -3,7 +3,8 @@ import { useEffect } from "react"
 import JsPDF from 'jspdf';
 import Sbutton from '../Components/Button/Sbutton'
 import './ModalData.css'
-function ModalData({ itemDetails, itemCreds, customerDetails, customerSignature, installer, getModal }) {
+
+function ModalData({ date, itemDetails, itemCreds, customerDetails, customerSignature, installer, getModal }) {
     const generatePDF = () => {
         const report = new JsPDF('portrait', 'pt', 'a4');
         report.html(document.querySelector('#report')).then(() => {
@@ -12,7 +13,7 @@ function ModalData({ itemDetails, itemCreds, customerDetails, customerSignature,
         });
     }
     useEffect(() => {
-        console.log("formfinaldata", itemDetails, itemCreds, customerDetails, customerSignature, installer)
+        console.log("formfinaldata", date, itemDetails, itemCreds, customerDetails, customerSignature, installer)
     }, [customerSignature, installer])
     return (
         <><div className='overlay'>
@@ -32,6 +33,7 @@ function ModalData({ itemDetails, itemCreds, customerDetails, customerSignature,
                         <div className='bottom'>{itemDetails?.map((item, index) => {
                             return <div className='item-row' key={index}> <p className='p'>{item?.count}</p><p className='ps'>{item?.item}</p></div>
                         })}
+
                         </div>
                     </div>
                     <div className='pdf-row'>
@@ -44,7 +46,7 @@ function ModalData({ itemDetails, itemCreds, customerDetails, customerSignature,
                     </div>
                     <div className='pdf-row'>
                         <div className='left'><h5>Date:</h5></div>
-                        <div className='right'><p>{customerDetails?.date}</p></div>
+                        {/* <div className='right'><p>{date || ""}</p></div> */}
                     </div>
                     <div className='pdf-box'>
                         <div className='top'><h5>Items Details</h5></div>

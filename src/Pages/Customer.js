@@ -72,7 +72,7 @@ function Customer({ setTab, getData }) {
 
 
   const getStep = () => {
-    getData(details, imageURL)
+    getData(details, imageURL,date)
     // setActive("3")
     setTab("installer")
   }
