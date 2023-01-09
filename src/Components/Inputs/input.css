@@ -5,7 +5,7 @@
   align-items: flex-start;
 }
 .input-container .field-name {
-  font-family: "Poppins";
+ font-family: 'Poppins-Medium';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -14,7 +14,7 @@
   margin-bottom: 9px;
 }
 .input-container .input {
-  font-family: "Poppins";
+ font-family: 'Poppins-Medium';
   outline: none;
   font-style: normal;
   min-width: 335px;
@@ -34,7 +34,7 @@
   align-items: flex-start;
 }
 .input-quantity .field-name {
-  font-family: "Poppins";
+ font-family: 'Poppins-Medium';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -61,7 +61,7 @@
   left: 0;
 }
 .input-quantity .quantity {
-  font-family: "Poppins";
+ font-family: 'Poppins-Medium';
   font-style: normal;
   max-width: 131px;
   width: 130px;
@@ -82,7 +82,7 @@
   max-width: 205px;
 }
 .input-item .field-name {
-  font-family: "Poppins";
+ font-family: 'Poppins-Medium';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -91,7 +91,7 @@
   margin-bottom: 9px;
 }
 .input-item .item {
-  font-family: "Poppins";
+ font-family: 'Poppins-Medium';
   font-style: normal;
   max-width: 205px;
   font-weight: 400;

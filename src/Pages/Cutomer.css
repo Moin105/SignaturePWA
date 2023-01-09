@@ -16,7 +16,7 @@
   align-items: flex-start;
 }
 .customer .input-container .field-name {
-  font-family: "Poppins";
+ font-family: 'Poppins-Medium';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -25,7 +25,7 @@
   margin-bottom: 9px;
 }
 .customer .input-container .input {
-  font-family: "Poppins";
+ font-family: 'Poppins-Medium';
   outline: none;
   font-style: normal;
   min-width: 335px;
